@@ -1,0 +1,29 @@
+# Logistic Regression Model Parameters
+model_params:
+  penalty: 'elasticnet'  # ElasticNet regularization
+  solver: 'saga'  # 'saga' solver supports ElasticNet penalty
+  l1_ratio: 0.5  # L1/L2 regularization mix (0.5 means equal mix)
+  max_iter: 10000  # Max iterations for convergence
+  random_state: 42  # For reproducibility
+
+# Stratified K-Fold Cross-Validation Settings
+cross_validation:
+  n_splits: 5
+  shuffle: true
+  random_state: 42
+
+# Metrics to evaluate
+metrics:
+  - 'accuracy'
+  - 'roc_auc'
+
+# SHAP Analysis Settings
+shap_analysis:
+  sample_size: 100  
+  shap_summary_plot: true  
+
+# Miscellaneous Settings
+logging:
+  level: 'INFO'  
+  enable: true  
+
